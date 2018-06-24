@@ -7,6 +7,6 @@ from .models import Picture
 @admin.register(Picture)
 class PictureAdmin(admin.ModelAdmin):
     fields = ("name", "creator", "description", "price")
-    list_display = ["price"]
+    list_display = ["name"]
 
 

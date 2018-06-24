@@ -2,7 +2,7 @@ from django.contrib.auth.models import User
 
 from rest_framework import serializers
 
-from canvas.models import Picture
+from canvas.models import Picture, Rating
 
 
 class UserSerializer(serializers.ModelSerializer):
@@ -21,3 +21,9 @@ class PictureSerializer(serializers.ModelSerializer):
         model = Picture
         fields = ("id", "name", "description", "price")
         lookup_field = "pk"
+
+
+class RatingSerializer(serializers.ModelSerializer):
+    class Meta: 
+        model = Rating
+        fields = ("id", "stars", "picture", "user")
