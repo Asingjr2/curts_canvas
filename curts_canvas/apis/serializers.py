@@ -19,7 +19,7 @@ class UserSerializer(serializers.ModelSerializer):
 class PictureSerializer(serializers.ModelSerializer):
     class Meta: 
         model = Picture
-        fields = ("id", "name", "description", "price", "avg_rating", "total_ratings")
+        fields = ("id", "name", "description", "price", "avg_rating", "total_ratings",)
         lookup_field = "pk"
 
 

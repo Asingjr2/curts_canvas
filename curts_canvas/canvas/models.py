@@ -17,7 +17,7 @@ class Picture(BaseModel):
         ratings_sum = 0
         all_ratings = Rating.objects.filter(picture=self)
         for rating in all_ratings:
-            ratings_sum += ratings.stars
+            ratings_sum += rating.stars
         ratings_count = all_ratings.count()
         if ratings_count > 0:
             return ratings_sum / ratings_count
